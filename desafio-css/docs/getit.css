@@ -22,144 +22,243 @@ Algumas informações úteis e dicas:
   - Sombra: https://codepen.io/sdthornton/pen/wBZdXq
  */
 
-html,
-body {
-  font-family: "Roboto", sans-serif;
-}
-
-
-.logo {
-  position: relative;   
-  width: 5rem; 
-}
-
-.appbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.7rem;
-  background-color: #f7d736;
-
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.subtitle {
-  padding-right: 2rem;
-  font-size: 1rem;
-  color: #2c2c2c;
-  margin-left: 1rem;
-}
-
-.form-card {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 0.2rem;
-  width: 35%;
-  margin-bottom: 3rem;
-  gap: 1rem;
-}
-
-.form-card textarea {
-  height: 1rem;
-  resize: none;
-  overflow: hidden;
-  max-height: 10rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 0.3rem;
-}
-
-.form-card-title{
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #2c2c2c;
-  border: none;
-}
-
-.autoresize {
-  font-size: 1rem;
-  border: none;
-}
-
-.container{
-
-}
-
-/* Você pode usar o CSS comentado abaixo, se ajudar */
-/* Fonte: https://codepen.io/CrisWoler/pen/ogXBLj */
-
-.btn {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-
-  overflow: hidden;
-
-  border-width: 0;
-  outline: none;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-
-  background-color: #f7d736;
-
-  transition: background-color 0.3s;
-}
-
-.btn > * {
-  position: relative;
-}
-
-.btn:before {
-  content: "";
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  display: block;
-  width: 0;
-  padding-top: 0;
-
-  border-radius: 100%;
-
-  background-color: rgba(236, 240, 241, 0.3);
-
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.btn:active:before {
-  width: 120%;
-  padding-top: 120%;
-
-  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
-}
-
-.card-color-1 {
-  background-color: #ead3a7;
-}
-
-.card-color-2 {
-  background-color: #9de0f5;
-}
-
-.card-color-3 {
-  background-color: #ef89ba;
-}
-
-.card-color-4 {
-  background-color: #fae890;
-}
-
-.card-color-5 {
-  background-color: #abe9c1;
-}
-
+ html,
+ body {
+   font-family: "Roboto", sans-serif;
+ }
+ 
+ 
+ .logo {
+   position: relative;   
+   width: 5rem; 
+ }
+ 
+ .appbar {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 0.75rem;
+   background-color: #f7d736;
+ 
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.55);
+ }
+ 
+ .subtitle {
+   padding-right: 2rem;
+   font-size: 1rem;
+   color: black;
+   margin-left: 1rem;
+ }
+ 
+ .form-card {
+   margin-top: 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0.7rem;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+   border-radius: 0.2rem;
+   width: 35%;
+   margin-bottom: 3rem;
+   gap: 1rem;
+ }
+ 
+ .form-card textarea {
+   
+   height: 1rem; /* Defina a altura inicial desejada */
+   resize: none;
+   overflow: hidden;
+   max-height: 10rem;
+   font-size: 1rem;
+   border: none; 
+   border-radius: 0.3rem;
+ }
+ 
+ .form-card textarea::placeholder {
+   font-family: "Roboto", sans-serif;
+   font-size: small;
+ }
+ 
+ .form-card-title{
+   font-size: 1.2rem;
+   font-weight: bold;
+   color: #2c2c2c;
+   border: none;
+ }
+ 
+ .autoresize {
+   font-size: 1rem;
+   border: none;
+ }
+ 
+ .container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+ }
+ 
+ .card-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-left: 4rem;
+   margin-right: 4rem;
+ }
+ 
+ .card {
+   font-family: "Permanent Marker", cursive;
+   display: flex;
+   flex-direction: column;
+   
+   height: 8.5rem;
+   padding: 0.5rem;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+   border-radius: 0.2rem;
+   width: 13rem; /* Ajustado para garantir que seis elementos caibam em uma linha */
+   box-sizing: border-box; /* Inclui padding e border no tamanho total */
+   gap: 1rem;
+   margin: 0.5rem;
+   
+ }
+ 
+ 
+ .card-title {
+   font-size: 1.2rem;
+   font-weight: bold;
+   color: black;
+   
+ }
+ 
+ .card-content {
+   font-size: 1rem;
+   color: #4c4c4c;
+   align-self: center;
+   font-weight: bold;
+   position: relative;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ /* Cores dos cards */
+ .card-color-1 {
+   background-color: #ead3a7;
+ }
+ 
+ .card-color-2 {
+   background-color: #9de0f5;
+ }
+ 
+ .card-color-3 {
+   background-color: #ef89ba;
+ }
+ 
+ .card-color-4 {
+   background-color: #fae890;
+ }
+ 
+ .card-color-5 {
+   background-color: #abe9c1;
+ }
+ 
+ /* Rotação dos cards */
+ .card-rotation-1 {
+   transform: rotate(-5deg);
+ }
+ 
+ .card-rotation-2 {
+   transform: rotate(-4deg);
+ }
+ 
+ .card-rotation-3 {
+   transform: rotate(-3deg);
+ }
+ 
+ .card-rotation-4 {
+   transform: rotate(-2deg);
+ }
+ 
+ .card-rotation-5 {
+   transform: rotate(-1deg);
+ }
+ 
+ .card-rotation-6 {
+   transform: rotate(0deg);
+ }
+ 
+ .card-rotation-7 {
+   transform: rotate(1deg);
+ }
+ 
+ .card-rotation-8 {
+   transform: rotate(2deg);
+ }
+ 
+ .card-rotation-9 {
+   transform: rotate(3deg);
+ }
+ 
+ .card-rotation-10 {
+   transform: rotate(4deg);
+ }
+ 
+ .card-rotation-11 {
+   transform: rotate(5deg);
+ }
+ 
+ 
+ 
+ /* Você pode usar o CSS comentado abaixo, se ajudar */
+ /* Fonte: https://codepen.io/CrisWoler/pen/ogXBLj */
+ .btn {
+   position: relative;
+   display: block;
+   padding: 10px 15px;
+   overflow: hidden;
+ 
+   border-width: 0;
+   outline: none;
+   border-radius: 2px;
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+ 
+   background-color: #f7d736;
+ 
+   transition: background-color 0.3s;
+ }
+ 
+ .btn > * {
+   position: relative;
+ }
+ 
+ .btn:before {
+   content: "";
+ 
+   position: absolute;
+   top: 50%;
+   left: 50%;
+ 
+   display: block;
+   width: 0;
+   padding-top: 0;
+ 
+   border-radius: 100%;
+ 
+   background-color: rgba(236, 240, 241, 0.3);
+ 
+   -webkit-transform: translate(-50%, -50%);
+   -moz-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   -o-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+ }
+ 
+ .btn:active:before {
+   width: 120%;
+   padding-top: 120%;
+ 
+   transition: width 0.2s ease-out, padding-top 0.2s ease-out;
+ }
+ 
